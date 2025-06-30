@@ -7,14 +7,18 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
-        <a href="#about">About Me</a>
-        <a href="#projects">Projects</a>
-        <a href="#competitions">Competitions</a>
-        <a href="#contact">Contact</a>
-        <button id="dark-mode-toggle">🌙 Dark Mode</button>
+        <div class="nav-links" id="nav-links">
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#competitions">Competitions</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button id="dark-mode-toggle">🌙</button>
+        <div class="hamburger" id="hamburger">☰</div>
     </nav>
 
     <section id="about" class="header-section" data-aos="fade-up">
@@ -24,13 +28,18 @@
 
         <p>Passionate about building a safer digital world through cloud security and real-world projects.</p>
 
-        <a href="YOUR_RESUME_LINK_HERE" download class="resume-button">Download Resume</a>
+        <a href="#" id="open-resume" class="resume-button">View Resume</a>
 
         <div class="social-icons">
             <a href="https://github.com/thejeremy881" target="_blank"><i class="fab fa-github"></i></a>
             <a href="https://linkedin.com/in/jeremyduong" target="_blank"><i class="fab fa-linkedin"></i></a>
         </div>
     </section>
+
+    <div id="resume-popup" class="resume-popup">
+        <span id="close-resume">&times;</span>
+        <iframe src="YOUR_RESUME_LINK_HERE" width="80%" height="500px"></iframe>
+    </div>
 
     <section id="projects" data-aos="fade-right">
         <h2>Projects</h2>
@@ -76,6 +85,32 @@
         });
     </script>
 
+    <!-- Hamburger Menu -->
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+
+    <!-- Resume Popup -->
+    <script>
+        const openResume = document.getElementById('open-resume');
+        const closeResume = document.getElementById('close-resume');
+        const resumePopup = document.getElementById('resume-popup');
+
+        openResume.addEventListener('click', (e) => {
+            e.preventDefault();
+            resumePopup.style.display = 'flex';
+        });
+
+        closeResume.addEventListener('click', () => {
+            resumePopup.style.display = 'none';
+        });
+    </script>
+
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -86,3 +121,4 @@
     </script>
 </body>
 </html>
+
