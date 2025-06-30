@@ -337,3 +337,36 @@ footer {
     background-color: #009ec3;
 }
 
+/* Project Detail Page */
+.project-detail {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.project-detail h1 {
+    margin-bottom: 20px;
+}
+
+.project-detail ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-detail a {
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    color: white;
+    border-radius: 5px;
+}
+
+.project-detail a:hover {
+    background-color: #009ec3;
+}
+
