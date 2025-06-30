@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Jeremy Duong - Personal Website</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav>
@@ -11,11 +12,22 @@
         <a href="#projects">Projects</a>
         <a href="#competitions">Competitions</a>
         <a href="#contact">Contact</a>
+        <button id="dark-mode-toggle">🌙 Dark Mode</button>
     </nav>
 
-    <section id="about">
-        <h1>Jeremy Duong</h1>
-        <p>Cybersecurity Analyst | Cloud Security | Passionate about building a safer digital world.</p>
+    <section id="about" class="header-section">
+        <h1>Hey There, It's Me</h1>
+        <h2>Jeremy Duong 👋</h2>
+        <h3>And I am <span id="typed-text"></span></h3>
+
+        <p>Passionate about building a safer digital world through cloud security and real-world projects.</p>
+
+        <a href="YOUR_RESUME_LINK_HERE" download class="resume-button">Download Resume</a>
+
+        <div class="social-icons">
+            <a href="https://github.com/thejeremy881" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/jeremyduong" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
     </section>
 
     <section id="projects">
@@ -42,5 +54,24 @@
         <p>LinkedIn: <a href="https://linkedin.com/in/jeremyduong" target="_blank">jeremyduong</a></p>
         <p>Email: thejeremyduong@gmail.com</p>
     </section>
+
+    <!-- Typed.js -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+        var typed = new Typed("#typed-text", {
+            strings: ["a Cybersecurity Analyst", "a Cloud Security Enthusiast", "an Aspiring Blue Teamer"],
+            typeSpeed: 50,
+            backSpeed: 50,
+            loop: true
+        });
+    </script>
+
+    <!-- Dark Mode Toggle -->
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        toggleButton.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
 </html>
