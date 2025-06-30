@@ -10,6 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Page Loader -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
     <!-- Scroll Progress Bar -->
     <div id="progress-bar"></div>
 
@@ -72,6 +78,14 @@
         </form>
     </section>
 
+    <footer>
+        <div class="footer-icons">
+            <a href="https://github.com/thejeremy881" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/jeremyduong" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2025 Jeremy Duong. All Rights Reserved.</p>
+    </footer>
+
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script>
@@ -127,6 +141,13 @@
         };
     </script>
 
+    <!-- Page Loader -->
+    <script>
+        window.addEventListener('load', () => {
+            document.getElementById('loader').style.display = 'none';
+        });
+    </script>
+
     <!-- AOS Animation -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -137,5 +158,6 @@
     </script>
 </body>
 </html>
+
 
 
