@@ -7,6 +7,16 @@ body {
     scroll-behavior: smooth;
 }
 
+#progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #00c3ff;
+    z-index: 9999;
+}
+
 nav {
     position: sticky;
     top: 0;
@@ -48,7 +58,6 @@ nav a:hover {
     background-color: #009ec3;
 }
 
-/* Header Section */
 .header-section {
     height: 100vh;
     background: linear-gradient(135deg, #4b0082, #8a2be2);
@@ -75,7 +84,6 @@ nav a:hover {
     background-color: #009ec3;
 }
 
-/* Social Media Icons */
 .social-icons {
     margin-top: 20px;
 }
@@ -91,7 +99,6 @@ nav a:hover {
     color: #00c3ff;
 }
 
-/* Section Styles */
 section {
     min-height: 100vh;
     display: flex;
@@ -99,6 +106,18 @@ section {
     justify-content: center;
     align-items: center;
     padding: 40px;
+}
+
+#projects {
+    background-color: #f9f9f9;
+}
+
+#competitions {
+    background-color: #f0f0f0;
+}
+
+#contact {
+    background-color: #f9f9f9;
 }
 
 h1, h2, h3, h4 {
@@ -110,7 +129,37 @@ ul {
     padding: 0;
 }
 
-/* Dark Mode Styles */
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.contact-form button {
+    padding: 10px;
+    background-color: #00c3ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.contact-form button:hover {
+    background-color: #009ec3;
+}
+
+/* Dark Mode */
 .dark-mode {
     background-color: #121212;
     color: white;
@@ -141,81 +190,4 @@ ul {
 }
 
 .dark-mode .social-icons a:hover {
-    color: #00c3ff;
-}
-
-/* Hamburger Menu */
-.hamburger {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-    margin-left: 20px;
-}
-
-.nav-links {
-    display: flex;
-    align-items: center;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: block;
-    }
-
-    nav a {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .header-section h1, .header-section h2, .header-section h3 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-    .resume-button {
-        width: 80%;
-        text-align: center;
-    }
-
-    .social-icons a {
-        font-size: 24px;
-    }
-}
-
-/* Resume Popup Styles */
-.resume-popup {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 2000;
-}
-
-.resume-popup iframe {
-    border: none;
-    border-radius: 10px;
-}
-
-.resume-popup span {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    font-size: 40px;
-    color: white;
-    cursor: pointer;
-}
+    color: #00c3f
