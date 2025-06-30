@@ -1,27 +1,93 @@
+/* Base Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #ffffff;
     color: #333333;
+    scroll-behavior: smooth;
 }
 
 nav {
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
-    background-color: #f4f4f4;
+    background-color: #222;
     padding: 15px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 nav a {
     margin: 0 20px;
     text-decoration: none;
-    color: #007acc;
+    color: white;
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #00c3ff;
+}
+
+#dark-mode-toggle {
+    margin-left: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #00c3ff;
+    color: white;
+    font-weight: bold;
+}
+
+#dark-mode-toggle:hover {
+    background-color: #009ec3;
+}
+
+/* Header Section */
+.header-section {
+    height: 100vh;
+    background: linear-gradient(135deg, #4b0082, #8a2be2);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.resume-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00c3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.resume-button:hover {
+    background-color: #009ec3;
+}
+
+/* Social Media Icons */
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #00c3ff;
+}
+
+/* Section Styles */
 section {
     min-height: 100vh;
     display: flex;
@@ -31,7 +97,7 @@ section {
     padding: 40px;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     margin-bottom: 20px;
 }
 
@@ -40,6 +106,58 @@ ul {
     padding: 0;
 }
 
-a:hover {
-    color: #005f99;
+/* Dark Mode Styles */
+.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: #333;
+}
+
+.dark-mode a {
+    color: white;
+}
+
+.dark-mode a:hover {
+    color: #00c3ff;
+}
+
+.dark-mode .resume-button {
+    background-color: #00c3ff;
+}
+
+.dark-mode .resume-button:hover {
+    background-color: #009ec3;
+}
+
+.dark-mode .social-icons a {
+    color: white;
+}
+
+.dark-mode .social-icons a:hover {
+    color: #00c3ff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .header-section h1, .header-section h2, .header-section h3 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .resume-button {
+        width: 80%;
+        text-align: center;
+    }
+
+    .social-icons a {
+        font-size: 24px;
+    }
 }
