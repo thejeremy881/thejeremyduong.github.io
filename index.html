@@ -19,6 +19,7 @@
     <!-- Scroll Progress Bar -->
     <div id="progress-bar"></div>
 
+    <!-- Navigation -->
     <nav>
         <div class="nav-links" id="nav-links">
             <a href="#about">About Me</a>
@@ -30,6 +31,7 @@
         <div class="hamburger" id="hamburger">☰</div>
     </nav>
 
+    <!-- Hero Section -->
     <section id="about" class="header-section" data-aos="fade-up">
         <h1>Hey There, It's Me</h1>
         <h2>Jeremy Duong 👋</h2>
@@ -45,20 +47,23 @@
         </div>
     </section>
 
+    <!-- Resume Popup -->
     <div id="resume-popup" class="resume-popup">
         <span id="close-resume">&times;</span>
         <iframe src="YOUR_RESUME_LINK_HERE" width="80%" height="500px"></iframe>
     </div>
 
+    <!-- Projects Section -->
     <section id="projects" data-aos="fade-right">
         <h2>Projects</h2>
         <ul>
-            <li><strong>Azure Cloud Security Assessment</strong> – Assessed and improved Azure security posture at SGV International.</li>
-            <li><strong>AWS Inventory Management System</strong> – Built a secure 3-tier architecture using CloudFormation.</li>
-            <li><strong>Stock Brokerage System</strong> – Developed Flask-based APIs with strict security controls.</li>
+            <li><a href="project-azure.html" target="_blank"></a><strong>Azure Cloud Security Assessment</strong> – Assessed and improved Azure security posture at SGV International.</li>
+            <li><a href="project-aws.html" target="_blank"></a><strong>AWS Inventory Management System</strong> – Built a secure 3-tier architecture using CloudFormation.</li>
+            <li><a href="project-stock.html" target="_blank"></a><strong>Stock Brokerage System</strong> – Developed Flask-based APIs with strict security controls.</li>
         </ul>
     </section>
 
+    <!-- Competitions Section -->
     <section id="competitions" data-aos="fade-left">
         <h2>Competitions & Hackathons</h2>
         <ul>
@@ -68,6 +73,7 @@
         </ul>
     </section>
 
+    <!-- Contact Form Section -->
     <section id="contact" data-aos="fade-up">
         <h2>Contact</h2>
         <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" class="contact-form">
@@ -78,6 +84,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <div class="footer-icons">
             <a href="https://github.com/thejeremy881" target="_blank"><i class="fab fa-github"></i></a>
@@ -85,6 +92,9 @@
         </div>
         <p>&copy; 2025 Jeremy Duong. All Rights Reserved.</p>
     </footer>
+
+    <!-- Scroll-to-Top Button -->
+    <button id="scrollTopBtn" title="Go to top">⬆️</button>
 
     <!-- Typed.js -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -131,14 +141,27 @@
         });
     </script>
 
-    <!-- Scroll Progress Bar -->
+    <!-- Scroll Progress and Scroll-to-Top -->
     <script>
-        window.onscroll = function() {
+        const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+        window.onscroll = function () {
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
             document.getElementById("progress-bar").style.width = scrolled + "%";
+
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                scrollTopBtn.style.display = "block";
+            } else {
+                scrollTopBtn.style.display = "none";
+            }
         };
+
+        scrollTopBtn.addEventListener('click', () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        });
     </script>
 
     <!-- Page Loader -->
@@ -156,8 +179,11 @@
             once: true
         });
     </script>
+
 </body>
 </html>
+
+
 
 
 
